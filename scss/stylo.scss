@@ -1,0 +1,186 @@
+/*variebles scss*/
+$small:18px;
+$large:20px;
+$xLarge:24px;
+/*variable colores*/
+$blue:blue;
+$yellow:yellow;
+$gris:rgb(141, 140, 140);
+$red:red;
+$black:black;
+$white:white;
+/*fin de variables*/
+*{
+    font-style: oblique;
+    text-align: center;
+    text-decoration: none;
+}
+@media only screen and (min-width:480px)
+{
+    body{
+        background-color:$yellow;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .formacion__cursos__info{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        flex-grow: 1;
+    }
+    .formacion__cursos__info div{
+        align-items: center;
+    }
+    p{
+        font-size: $large;
+    }
+}
+@media only screen and (min-width:800px)
+{
+    body{
+        background-color: $red;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .info__data div{
+        margin: 0px 5% 0px 5%;
+        width: 40%;
+    }
+    .formacion__cursos__info{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        flex-grow: 1;
+    }
+    .formacion__cursos__info div{
+        align-items: center;
+    }
+    p{
+        font-size: $large;
+    }
+}
+@media only screen and (min-width:1000px)
+{
+    body{
+        background-image:linear-gradient(to left, $white,$gris);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .info__data div{
+        margin: 0px 5% 0px 5%;
+        width: 40%;
+    }
+    .formacion__cursos__info{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        flex-grow: 1;
+    }
+    .formacion__cursos__info div{
+        margin: 0px 3% 0px 3%;
+        width: 40%;
+        align-items: center;
+    }
+    .formacion__fotocursos__img{
+        transform: translate(0px,30px);
+    }
+    .formacion__fotocursos__img3{
+        transform: translate(0px,50px);
+    }
+}
+nav div{
+    display: block;
+    background-color: red;
+}
+h2{
+    color:red;
+    font-size: 250%;
+}
+.index__footer__p p{
+    color: black;
+    font-size: 200%;
+    height: 40px;
+    transform: translate(0px,-20px);
+    animation-duration: 2s;
+    animation-name: aparecer;
+}
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+footer{
+    display: block;
+    margin-right: 20%;
+    margin-left: 20%;
+    height: 70px;
+    padding: 2%;
+    width: 59%;
+}
+.formacion__section__main{
+    display: block;
+    justify-content: center;
+    margin: 0px 3% 0px 3%;
+}
+section main div{
+    margin: 0px 4% 0px 4%;
+    padding: 2%;
+    content: 60%;
+}
+.bares__main{
+    text-decoration: none;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns:30% 30%;
+	justify-content: center;
+}
+.info__data{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.formacion__fotocursos__img{
+    width:200px;
+    height:200px;
+}
+.formacion__fotocursos__img2{
+    width:200px;
+    height:200px;
+}
+.formacion__fotocursos__img3{
+    width:200px;
+    height:200px;
+}
+
+
+
+
+
+
+/*bocto extend*/
+.btn{
+    width: 200px;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px solid $black;
+    background-color: $white;
+    color:$black;
+}
+.btn--hecho{
+    @extend .btn;
+    background-color: $red;
+    font-size: 30px;
+    color:$black;
+}
+.contacto__input{
+    transition: 3s;
+}
+.contacto__input:focus{
+    width: 100%;
+    height: 100px;
+    font-size: 50px;
+}
